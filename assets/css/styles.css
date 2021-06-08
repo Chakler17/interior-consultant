@@ -1,0 +1,236 @@
+:root {
+  --color-dark: #181719;
+  --color-light: #ffffff;
+  --color-gray-1: #a9a9a9;
+  --color-gray-2: #f2f2f2;
+  --color-gray-3: #828282;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-light);
+}
+
+h1{
+  font-size: 3.6rem;
+  font-family: "Lora", sans-serif;
+  font-weight: 500;
+}
+
+img{
+  width: 100%;
+}
+
+li{
+  list-style: none;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+.flex {
+  display: flex;
+}
+
+.s-b {
+  justify-content: space-between;
+}
+
+.c-x {
+  justify-content: center;
+}
+
+.c-y {
+  align-items: center;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  max-width: 120rem;
+  padding: 1.9rem 1.2rem;
+  margin: 0 auto;
+}
+
+/* Logo */
+.navbar__logo {
+  font-family: "Crimson Pro", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 200;
+  text-transform: uppercase;
+
+  padding: 0.8rem;
+  border: 0.1rem solid var(--color-light);
+  display: inline-block; /*Elemento en linea que se comporta como bloque*/
+}
+
+/* Hamburguer Button */
+
+.hamburguer-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.hamburguer-button__bar {
+  height: 0.3rem;
+  width: 2.2rem;
+  background-color: var(--color-light);
+  margin-top: 0.4rem;
+  border-radius: 0.2rem;
+
+  transform-origin: 2.1rem;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  
+}
+
+.hamburguer-button__bar:nth-child(1) {
+  margin-top: 0;
+}
+
+.hamburguer-button--open .hamburguer-button__bar:nth-child(1) {
+  transform: rotate(-45deg);
+}
+
+.hamburguer-button--open .hamburguer-button__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburguer-button--open .hamburguer-button__bar:nth-child(3) {
+  transform: rotate(45deg);
+}
+
+/* Navbar */
+
+.nav {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+
+  background-color: var(--color-dark);
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.8rem;
+
+  right: -100vw;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav--open{
+  /* right: 0; */
+  transform: translateX(-100%);
+}
+
+.nav li{
+  margin-top: 3.2rem;
+}
+
+.nav li:nth-child(1){
+  margin-top: 0;
+}
+
+.nav a{
+  transition: padding 0.2s ease-in-out;
+}
+
+.nav a:hover{
+  border-bottom: .2rem solid var(--color-light);
+  padding-bottom: .8rem;
+}
+/* Main Content */
+
+.info__description{
+  max-width: 25rem;
+  margin: 2.5rem 0;
+}
+
+.info__button{
+  color: var(--color-light);
+  font-weight: 700;
+  gap: 1.5rem;
+}
+
+.content__image{
+  position: relative;
+  margin-top: 3.7rem;
+}
+
+.image__card{
+  background-color: var(--color-dark);
+  padding: 2rem;
+  width: 30rem;
+  box-shadow: 0px 4px 4px var(--color-dark);
+  position: absolute;
+  bottom: -9rem;
+  right: 1.5rem;
+}
+
+.card__profile{
+  gap: 1.4rem;
+}
+
+.profile__photo{
+  width: 3.7rem;
+  height: 3.7rem;
+  border-radius: 5rem;
+}
+
+.profile__user{
+  font-weight: 500;
+}
+
+.user__name{
+  font-size: 1.2rem;
+}
+
+.user__rol{
+  font-size: 1rem;
+  color: var(--color-gray-3);
+  margin-top: .5rem;
+}
+
+.card__bio{
+  font-family: "Lora", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+
+  width: 21rem;
+}
+
+/* Footer */
+
+.footer {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-gray-1);
+  text-align: center;
+  margin-top: 12rem;
+}
+
+.footer a {
+  color: var(--color-gray-1);
+}

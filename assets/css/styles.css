@@ -24,17 +24,17 @@ a {
   color: var(--color-light);
 }
 
-h1{
+h1 {
   font-size: 3.6rem;
   font-family: "Lora", sans-serif;
   font-weight: 500;
 }
 
-img{
+img {
   width: 100%;
 }
 
-li{
+li {
   list-style: none;
 }
 
@@ -66,7 +66,7 @@ body {
   align-items: center;
 }
 
-.container{
+.container {
   max-width: 120rem;
   padding: 1.9rem 1.2rem;
   margin: 0 auto;
@@ -102,7 +102,6 @@ body {
 
   transform-origin: 2.1rem;
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-  
 }
 
 .hamburguer-button__bar:nth-child(1) {
@@ -138,46 +137,50 @@ body {
   transition: transform 0.4s ease-in-out;
 }
 
-.nav--open{
+.nav--open {
   /* right: 0; */
   transform: translateX(-100%);
 }
 
-.nav li{
+.nav li {
   margin-top: 3.2rem;
 }
 
-.nav li:nth-child(1){
+.nav li:nth-child(1) {
   margin-top: 0;
 }
 
-.nav a{
+.nav a {
   transition: padding 0.2s ease-in-out;
 }
 
-.nav a:hover{
-  border-bottom: .2rem solid var(--color-light);
-  padding-bottom: .8rem;
+.nav a:hover {
+  border-bottom: 0.2rem solid var(--color-light);
+  padding-bottom: 0.8rem;
+}
+
+.nav-deskpot {
+  display: none;
 }
 /* Main Content */
 
-.info__description{
+.info__description {
   max-width: 25rem;
   margin: 2.5rem 0;
 }
 
-.info__button{
+.info__button {
   color: var(--color-light);
   font-weight: 700;
   gap: 1.5rem;
 }
 
-.content__image{
+.content__image {
   position: relative;
   margin-top: 3.7rem;
 }
 
-.image__card{
+.image__card {
   background-color: var(--color-dark);
   padding: 2rem;
   width: 30rem;
@@ -187,31 +190,31 @@ body {
   right: 1.5rem;
 }
 
-.card__profile{
+.card__profile {
   gap: 1.4rem;
 }
 
-.profile__photo{
+.profile__photo {
   width: 3.7rem;
   height: 3.7rem;
   border-radius: 5rem;
 }
 
-.profile__user{
+.profile__user {
   font-weight: 500;
 }
 
-.user__name{
+.user__name {
   font-size: 1.2rem;
 }
 
-.user__rol{
+.user__rol {
   font-size: 1rem;
   color: var(--color-gray-3);
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
-.card__bio{
+.card__bio {
   font-family: "Lora", sans-serif;
   font-weight: 700;
   font-size: 1.8rem;
@@ -233,4 +236,56 @@ body {
 
 .footer a {
   color: var(--color-gray-1);
+}
+
+/* Desktop Design */
+
+@media (min-width: 810px) {
+  .container {
+    max-width: 144rem;
+    padding: 4.2rem 7.7rem;
+  }
+
+  .hamburguer-button {
+    display: none;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav-deskpot {
+    display: block;
+    font-weight: 500;
+    font-size: 1.8rem;
+  }
+
+  .nav-deskpot a {
+    transition: padding 0.2s ease-in-out;
+  }
+
+  .nav-deskpot a:hover {
+    border-bottom: 0.2rem solid var(--color-light);
+    padding-bottom: 0.8rem;
+  }
+
+  .nav-deskpot ul {
+    display: flex;
+    gap: 8.6rem;
+  }
+
+  .main-content {
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+
+  .content__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .content__image {
+    margin-top: auto;
+  }
 }
